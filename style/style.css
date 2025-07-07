@@ -1,0 +1,423 @@
+* {
+    font-family: "SF Pro", "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+html, body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.navBar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 8vh;
+    background-color: #002EE1;
+    font-size: 36px;
+    color: #FAFAFA;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBarLinks {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 8px 32px;
+}
+
+.logout input[type="submit"] {
+    background: var(--Vermelho, #E94B4B);
+    color: var(--Branco, #FAFAFA);
+    padding: 8px;
+    font-size: 12px;
+}
+
+.logout input[type="submit"]:active {
+    background: var(--Vermelho, #B22222);
+    color: var(--Branco, #FAFAFA);
+}
+
+.navBar a {
+    padding: 8px 32px;
+    color: var(--Branco, #FAFAFA);
+}
+
+a {
+    text-decoration: none;
+}
+
+.close:hover {
+    background-color: #DFA929!important;
+    border-radius: 0px 12px 0px 0px;
+}
+
+.modalContent {
+    border-radius: 12px!important;
+    width: 15vw;
+}
+
+.modalContainer {
+    padding: 0px!important;
+}
+
+.modalContainer {
+    color: var(--Branco, #FAFAFA);
+}
+
+td a {
+    color: #DFA929;
+    font-weight: 700;
+}
+
+td a:hover {
+    color: #E5C67C;
+}
+
+p a {
+    font-weight: 700;
+}
+
+.footer {
+    display: flex;
+    height: 8%;
+    align-items: center;
+    gap: 57px;
+    background: #3457DF;
+}
+
+.footer div {
+    color: var(--Branco, #FAFAFA);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    padding: 8px 32px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 12px 0px;
+    gap: 30px;
+    margin: auto;
+    min-height: 100vh;
+    margin-top: 10vh;
+}
+
+table {
+    font-size: 12px;
+}
+
+.contentHeader {
+    display: flex;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    border-radius: 12px;
+    background: var(--Laranja, #DFA929);
+}
+
+.contentHeader h1 {
+    font-size: 20px;
+    color: var(--Branco, #FAFAFA);
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.mainHeader {
+    display: flex;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    border-radius: 12px;
+    background: var(--Laranja, #DFA929);
+}
+
+.mainHeader h1 {
+    font-size: 26px;
+    color: var(--Branco, #FAFAFA);
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.mainDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 90%;
+    padding: 64px;
+    gap: 30px;
+}
+
+.column {
+    flex: 50%;
+}
+
+.mainImgDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contentTable {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.contentTableHeader {
+    color: var(--Branco, #FAFAFA);
+    font-weight: 700;
+}
+
+.contentTableHeader th {
+    background-color: var(--Laranja, #E5C67C);
+    text-align: left;
+}
+
+.contentTableHeader th,td {
+    padding: 12px 12px;
+}
+
+tr:first-child th:first-child { border-top-left-radius: 12px; }
+tr:first-child th:last-child { border-top-right-radius: 12px; }
+
+tr:last-child td:first-child { border-bottom-left-radius: 12px; }
+tr:last-child td:last-child { border-bottom-right-radius: 12px; }
+
+form:not(.logout,.userModal) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 64px;
+}
+
+form.userModal {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+.insertProductDiv  {
+    display: flex;
+    width: 50%;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 12px;
+    background: var(--Laranja, #E5C67C);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.deleteProductDiv  {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 12px;
+    background: var(--Laranja, #E5C67C);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.productInsertedDiv  {
+    display: flex;
+    width: 100%;
+    color: var(--Branco, #FAFAFA);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 12px;
+    background: var(--Laranja, #E5C67C);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.productInsertedDiv span {
+    padding: 12px;
+}
+
+.insertProductDiv div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px
+}
+
+.deleteProductDiv div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px
+}
+
+.insertProductDiv input,select {
+    border-radius: 4px;
+    border: none;
+    padding: 0 12px;
+    font-size: 16px;
+    background-color: var(--Branco, #FAFAFA);
+}
+
+.insertProductDiv label {
+    font-size: 12px;
+    color: var(--Branco, #FAFAFA);
+    font-weight: 700;
+}
+
+.userModal  {
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    gap: 20px;
+    border-radius: 12px;
+    background: var(--Laranja, #E5C67C);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.userModal div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px
+}
+
+.userModal input,select {
+    border-radius: 4px;
+    border: none;
+    padding: 0 12px;
+    font-size: 16px;
+    background-color: var(--Branco, #FAFAFA);
+}
+
+.userModal label {
+    font-size: 12px;
+    color: var(--Branco, #FAFAFA);
+    font-weight: 700;
+}
+
+.deleteProductDiv input,select {
+    border-radius: 4px;
+    border: none;
+    padding: 0 12px;
+    font-size: 16px;
+    background-color: var(--Branco, #FAFAFA);
+}
+
+.deleteProductDiv label {
+    font-size: 12px;
+    color: var(--Branco, #FAFAFA);
+    font-weight: 700;
+}
+
+form .insertProductSubmitDiv  {
+    display: flex;
+    width: 50%;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+form .deleteProductSubmitDiv  {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+
+form input[type="button"],input[type="submit"]  {
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: var(--Branco, #FAFAFA);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+}
+
+form input[type="button"] {
+    background: var(--Azul, #6B85E9);
+}
+
+form input[type="submit"] {
+    background: var(--Azul, #3457DF);
+}
+
+form input[type="button"]:active {
+    background: var(--Azul, #3457DF);
+    color: var(--Branco, #FAFAFA);
+}
+
+form input[type="submit"]:active {
+    background: var(--Azul, #002EE1);
+    color: var(--Branco, #FAFAFA);
+}
+
+.userModal input[type="submit"] {
+    background: var(--Azul, #3457DF);
+    width: 100%;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.insertProductSubmitDiv div {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.deleteProductSubmitDiv div {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+#deleteProductButton {
+    background: var(--Vermelho, #E94B4B);
+    color: var(--Branco, #FAFAFA);
+}
+
+#deleteProductButton:active {
+    background: var(--Vermelho, #B22222);
+    color: var(--Branco, #FAFAFA);
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--Branco, #FAFAFA);
+    background-color: var(--Branco, #FAFAFA);
+}
